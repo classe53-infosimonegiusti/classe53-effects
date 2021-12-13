@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.quadrato {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation: muoviti 10s ease 0s infinite, colora 0.5s ease 0s infinite;
+    transition: all 1s;
+}
+
+.quadrato:hover {
+    background-color: black;
+}
+
+.quadrato:active {
+    width: 200px;
+    height: 200px;
+}
+
+
+@keyframes colora {
+    0% {
+        background-color: red;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes muoviti {
+    
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        width: 100px;
+        top: 0;
+        left: calc(100% - 100px);
+    }
+
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+
+    75% {
+        top: calc(100% - 100px);
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+
+}
